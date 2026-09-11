@@ -1,0 +1,6 @@
+import { NextResponse } from "next/server";
+import { db } from "@/db";
+import { springs,villages } from "@/db/schema";
+import { eq } from "drizzle-orm";
+import { calculateWaterDebt } from "@/lib/demo-data";
+export async function GET(req:Request){const villageId=new URL(req.url).searchParams.get('villageId');try{const base=db.select({spring_id:springs.spring_id,spring_name:springs.name,current_discharge:springs.current_discharge,village_name:villages.name,village_population:villages.population,village_ag_area:villages.agricultural_area,village_id:villages.village_id}).from(springs).leftJoin(villages,eq(springs.village_id,villages.village_id));const rows=villageId?await base.where(eq(springs.village_id,parseInt(villageId))):await base;const results=rows.map(s=>{const demand=(s.village_population??500)*100;const debt=calculateWaterDebt(s.current_discharge??10000,s.village_ag_area??50,800,demand);return{...s,...debt,projectedWaterDebt:Math.round(debt.waterDebt*1.15)}});const totals=results.reduce((a,r)=>({totalDemand:a.totalDemand+r.totalDemand,available:a.available+r.available,waterDebt:a.waterDebt+r.waterDebt,projectedWaterDebt:a.projectedWaterDebt+r.projectedWaterDebt}),{totalDemand:0,available:0,waterDebt:0,projectedWaterDebt:0});return NextResponse.json({springDebts:results,totals});}catch(e){return NextResponse.json({error:String(e)},{status:500});}}
