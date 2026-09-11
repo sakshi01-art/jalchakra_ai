@@ -1,0 +1,5 @@
+"use client";
+import { useEffect,useState } from "react";
+import { Droplets } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
+export default function WaterDebtPage(){const[data,setData]=useState<any>(null);useEffect(()=>{fetch('/api/water-debt').then(r=>r.json()).then(setData)},[]);return <div className="space-y-6"><PageHeader icon={Droplets} title="Water Debt" subtitle="Track the gap between water demand and reliable spring supply"/><div className="grid grid-cols-3 gap-4">{[['Total Debt',data?.totalWaterDebt??'—'],['Demand',data?.totalDemand??'—'],['Supply',data?.totalSupply??'—']].map(([a,b])=><div className="glass rounded-xl p-5" key={String(a)}><div className="text-xs text-slate-500">{a}</div><div className="text-2xl font-black text-white mt-2">{b}</div></div>)}</div><div className="glass rounded-xl p-5"><h3 className="font-semibold text-white mb-3">Water Balance Intelligence</h3><p className="text-sm text-slate-400">JALCHAKRA compares agricultural demand, household needs and dependable spring discharge to identify water stress and intervention priorities.</p></div></div>}
