@@ -1,0 +1,4 @@
+"use client";
+import { FileText,Download } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
+export default function ReportsPage(){return <div className="space-y-6"><PageHeader icon={FileText} title="Reports" subtitle="Generate decision-ready summaries for field officers and programme teams"/><div className="grid md:grid-cols-3 gap-4">{['Spring Health Report','Recharge Priority Report','Farm Water Planning Report'].map((r)=><div key={r} className="glass rounded-xl p-5"><FileText className="w-6 h-6 text-sky-400 mb-3"/><h3 className="text-white font-semibold">{r}</h3><p className="text-xs text-slate-500 mt-1">AI-assisted summary based on monitored data.</p><button className="btn-secondary mt-4 flex gap-2 items-center"><Download className="w-4 h-4"/>Prepare</button></div>)}</div></div>}
