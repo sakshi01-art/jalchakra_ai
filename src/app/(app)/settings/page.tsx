@@ -1,0 +1,4 @@
+"use client";
+import { Settings } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
+export default function SettingsPage(){return <div className="space-y-6"><PageHeader icon={Settings} title="Settings" subtitle="Configure monitoring, planning and demonstration preferences"/><div className="glass rounded-xl p-5 space-y-4"><div><h3 className="text-white font-semibold">Platform Configuration</h3><p className="text-xs text-slate-500 mt-1">JALCHAKRA AI uses the configured database and environment variables for deployment.</p></div><div className="grid md:grid-cols-2 gap-3"><div className="bg-sky-500/5 rounded-lg p-4"><div className="text-xs text-slate-500">Environment</div><div className="text-white font-medium">Prototype / Demo</div></div><div className="bg-sky-500/5 rounded-lg p-4"><div className="text-xs text-slate-500">Data Mode</div><div className="text-white font-medium">Explainable AI + simulated field data</div></div></div></div></div>}
