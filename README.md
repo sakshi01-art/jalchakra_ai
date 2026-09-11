@@ -21,26 +21,27 @@
 
 ## 💧 What is JALCHAKRA AI?
 
-JALCHAKRA AI is a software platform designed for **spring revival and recharge planning** in tribal and rural regions. Instead of treating a spring as an isolated water source, the platform connects the complete chain:
+JALCHAKRA AI is a **software-first water intelligence and planning platform** for spring revival and recharge planning in tribal and rural regions. Instead of treating a spring as an isolated water source, the platform connects the complete planning chain:
 
 **Spring health → recharge zone → water debt → interventions → future scenarios → farm planning → measurable impact**
 
-The goal is to help field teams and decision-makers move from scattered observations to **evidence-based, location-aware water planning**.
+The prototype is designed for a hackathon setting: it demonstrates the complete decision workflow while keeping live field/IoT integrations and production geospatial datasets as future extensions.
 
 ## ✨ Core Innovation
 
 | Module | What it does |
 |---|---|
-| 🧬 **Spring DNA** | Builds a structured health profile for each spring using observations and indicators. |
-| 🗺️ **Recharge Map** | Visualizes springs and recharge/intervention planning areas on an interactive map. |
-| 💧 **Water Debt** | Compares demand and available water to expose seasonal stress. |
-| 🌾 **Reverse Farm Planner** | Starts with farm needs and works backward to water availability and feasible crops. |
-| 🔮 **Future Simulator** | Compares possible future outcomes under different intervention scenarios. |
-| ⚙️ **Intervention Optimizer** | Ranks intervention strategies using available spring and recharge information. |
-| 🔗 **Impact Chain** | Connects interventions with spring recovery, water security and farm outcomes. |
-| 📊 **Monitoring & Reports** | Supports observation tracking and decision-ready reporting. |
+| 🧬 **Spring DNA** | Creates a structured health profile for each spring from observations and indicators. |
+| 🗺️ **Recharge Map** | Prioritizes recharge/intervention zones using location-aware planning signals. |
+| 💧 **Water Debt** | Compares seasonal demand and available supply to expose water stress. |
+| 🌾 **Reverse Farm Planner** | Starts with farm needs and works backward to water availability and feasible crop choices. |
+| 🔮 **Future Simulator** | Stress-tests revival scenarios across different rainfall, budget and time assumptions. |
+| ⚙️ **Intervention Optimizer** | Ranks intervention strategies against planning constraints. |
+| 🔗 **Impact Chain** | Shows how interventions can flow from spring recovery to farm resilience. |
+| 📡 **Monitoring** | Tracks observations, discharge/rainfall signals and validation feedback. |
+| 📊 **Reports** | Builds a decision-ready planning summary for field and review teams. |
 
-## 🧠 System Flow
+## 🧠 End-to-End System Flow
 
 ```mermaid
 flowchart LR
@@ -49,11 +50,25 @@ flowchart LR
     C --> D[Water Debt]
     D --> E[Future Simulator]
     E --> F[Intervention Optimizer]
-    F --> G[Farm Planner]
+    F --> G[Reverse Farm Planner]
     G --> H[Impact Chain]
     H --> I[Monitoring & Reports]
     I -. feedback .-> B
 ```
+
+## 🏆 Why this is different
+
+Most water dashboards stop at **measurement and visualization**. JALCHAKRA AI is structured as a **decision loop**:
+
+1. Identify the spring's current health.
+2. Locate and rank recharge opportunities.
+3. Quantify water stress as a demand-vs-supply gap.
+4. Test intervention scenarios before field deployment.
+5. Optimize the intervention package.
+6. Convert expected water availability into farm decisions.
+7. Track impact and feed observations back into the planning cycle.
+
+> **Don't only measure water. Understand its journey.**
 
 ## 🎯 SIH 2026 Alignment
 
@@ -63,6 +78,34 @@ flowchart LR
 - **Category:** Software
 - **Theme:** Agriculture, FoodTech & Rural Development
 
+## 🖥️ Demo Journey
+
+For a hackathon presentation, the recommended click-through is:
+
+```text
+Landing Page
+   ↓
+Dashboard / Spring DNA
+   ↓
+Recharge Map
+   ↓
+Water Debt
+   ↓
+Future Simulator
+   ↓
+Intervention Optimizer
+   ↓
+Reverse Farm Planner
+   ↓
+Impact Chain
+   ↓
+Monitoring
+   ↓
+Reports
+```
+
+This tells one continuous story instead of presenting the modules as disconnected pages.
+
 ## 🛠️ Tech Stack
 
 - **Frontend:** Next.js, React, TypeScript
@@ -71,18 +114,44 @@ flowchart LR
 - **Charts:** Recharts
 - **Data layer:** Drizzle ORM
 - **Local development:** PGlite-compatible setup
-- **Database:** PostgreSQL-compatible architecture
+- **Database architecture:** PostgreSQL-compatible
 
 ## 🚀 Run Locally
 
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sakshi01-art/jalchakra_ai.git
+cd jalchakra_ai
+```
+
+### 2. Install dependencies
+
 ```bash
 npm install
+```
+
+### 3. Configure environment
+
+Copy `.env.example` to your local environment file and replace placeholder values with your own local configuration.
+
+```bash
+# Windows PowerShell
+Copy-Item .env.example .env.local
+
+# macOS / Linux
+cp .env.example .env.local
+```
+
+### 4. Start development server
+
+```bash
 npm run dev
 ```
 
-Then open the local development URL shown by Next.js.
+Open the local URL printed by Next.js.
 
-For environment configuration, copy `.env.example` to your local environment file and set your own values.
+> **Prototype note:** Demo data and simulated projections are intended for hackathon demonstration. Live field/IoT ingestion, production geospatial layers and model calibration are roadmap items.
 
 ## 📁 Project Structure
 
@@ -96,6 +165,7 @@ src/
 │   │   ├── simulator/
 │   │   ├── optimizer/
 │   │   ├── impact-chain/
+│   │   ├── monitoring/
 │   │   ├── reports/
 │   │   └── settings/
 │   ├── dashboard/
@@ -106,29 +176,40 @@ src/
 └── lib/
 ```
 
-## 🌱 Design Philosophy
+## 🔌 API Surface
 
-> **Don't only measure water. Understand its journey.**
+The application includes route handlers for the main planning workflow, including:
 
-JALCHAKRA AI is built around a closed-loop planning approach: observations inform models, models support interventions, interventions affect water availability, and new observations can feed the next planning cycle.
+- `/api/springs` — spring discovery/selection
+- `/api/health` — health signals
+- `/api/observations` — field observations
+- `/api/recharge-map` — recharge planning data
+- `/api/water-debt` — demand/supply stress
+- `/api/simulate` — scenario projections
+- `/api/optimize` — intervention optimization
+- `/api/farm-planner` — farm planning calculations
+- `/api/dashboard` — dashboard data
 
 ## 🔐 Security & Configuration
 
-Secrets and local environment files are intentionally excluded from version control. Use `.env.example` as the safe configuration template.
+Secrets and local environment files are intentionally excluded from version control. Use `.env.example` as the safe configuration template. Never commit `.env.local`, API keys, database credentials or other private secrets.
 
-## 🗺️ Roadmap
+## 🌱 Roadmap
 
 - [x] Spring health dashboard
+- [x] Spring DNA profiles
 - [x] Recharge map foundation
 - [x] Water debt module
 - [x] Scenario simulation foundation
 - [x] Intervention optimization foundation
-- [x] Farm planning workflow
+- [x] Reverse farm planning workflow
 - [x] Impact-chain visualization
+- [x] Monitoring workflow
+- [x] Decision-ready report builder
 - [ ] Connect to live field/IoT observations
 - [ ] Add production-grade geospatial datasets
 - [ ] Calibrate models with field observations
-- [ ] Deploy district-level monitoring
+- [ ] Add district-level deployment and role-based access
 
 ---
 
