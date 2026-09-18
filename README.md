@@ -43,18 +43,85 @@ The prototype is designed for a hackathon setting: it demonstrates the complete 
 
 ## 🧠 End-to-End System Flow
 
+### 🌊 Spring-to-Farm Decision Pipeline
+
 ```mermaid
 flowchart LR
-    A[Field Observations] --> B[Spring DNA]
-    B --> C[Recharge Intelligence]
-    C --> D[Water Debt]
-    D --> E[Future Simulator]
-    E --> F[Intervention Optimizer]
-    F --> G[Reverse Farm Planner]
-    G --> H[Impact Chain]
-    H --> I[Monitoring & Reports]
-    I -. feedback .-> B
+    A[📍 Field & Satellite Data] --> B[🧬 Spring DNA]
+    B --> C[🗺️ Recharge Intelligence]
+    C --> D[💧 Water Debt]
+    D --> E[🔮 Future Simulator]
+    E --> F[⚙️ Intervention Optimizer]
+    F --> G[🌾 Reverse Farm Planner]
+    G --> H[🔗 Impact Chain]
+    H --> I[📡 Monitoring & Reports]
+    I -. continuous feedback .-> B
+    I -. new observations .-> E
 ```
+
+### 🏗️ System Architecture
+
+```mermaid
+flowchart TB
+    subgraph DATA[📥 Data Sources]
+        S1[Satellite & Terrain]
+        S2[Rainfall & Climate]
+        S3[Spring / Water Observations]
+        S4[Soil & Crop Information]
+        S5[Community / Field Surveys]
+    end
+
+    subgraph AI[🧠 JALCHAKRA AI ENGINE]
+        P[Data Processing & GIS]
+        M1[Spring Decline Analysis]
+        M2[Recharge Zone Detection]
+        M3[Water Availability Forecasting]
+        M4[Intervention Optimization]
+        M5[AI Crop & Water Allocation]
+    end
+
+    subgraph APP[🖥️ Application Layer]
+        A1[Spring DNA Dashboard]
+        A2[Recharge Map]
+        A3[Future Simulator]
+        A4[Farm Planner]
+        A5[Monitoring & Reports]
+    end
+
+    subgraph USERS[👥 Users]
+        U1[Tribal Farmers]
+        U2[Local Authorities]
+        U3[Field Teams / Researchers]
+    end
+
+    S1 --> P
+    S2 --> P
+    S3 --> P
+    S4 --> P
+    S5 --> P
+    P --> M1
+    P --> M2
+    P --> M3
+    M1 --> M2
+    M2 --> M4
+    M3 --> M4
+    M4 --> M5
+    M5 --> A4
+    M1 --> A1
+    M2 --> A2
+    M3 --> A3
+    M4 --> A5
+    M5 --> A5
+    A1 --> U1
+    A2 --> U2
+    A3 --> U2
+    A4 --> U1
+    A5 --> U2
+    A5 --> U3
+    U1 -. feedback .-> S5
+```
+
+> **Core idea:** JALCHAKRA AI connects spring revival with downstream farm planning, so water recovery becomes a measurable livelihood decision.
 
 ## 🏆 Why this is different
 
