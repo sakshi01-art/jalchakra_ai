@@ -41,6 +41,14 @@ The prototype is designed for a hackathon setting: it demonstrates the complete 
 | 📡 **Monitoring** | Tracks observations, discharge/rainfall signals and validation feedback. |
 | 📊 **Reports** | Builds a decision-ready planning summary for field and review teams. |
 
+## 🎨 Project Visual Overview
+
+<p align="center">
+  <img src="./assets/jalchakra-project-draw.svg" alt="Jalchakra AI project architecture and workflow" width="100%" />
+</p>
+
+> **Visual:** Spring revival → recharge intelligence → AI planning → farm decisions → impact.
+
 ## 🧠 End-to-End System Flow
 
 ### 🌊 Spring-to-Farm Decision Pipeline
