@@ -49,6 +49,85 @@ The prototype is designed for a hackathon setting: it demonstrates the complete 
 
 > **Visual:** Spring revival → recharge intelligence → AI planning → farm decisions → impact.
 
+
+## ✨ Feature Highlights
+
+<table>
+<tr>
+<td width="50%">
+
+### 🧬 Spring DNA
+Build a structured health profile from spring observations and key indicators.
+
+</td>
+<td width="50%">
+
+### 🗺️ Recharge Intelligence
+Turn location, terrain and planning signals into prioritized recharge opportunities.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🔮 Future Simulator
+Compare possible revival scenarios before committing resources in the field.
+
+</td>
+<td width="50%">
+
+### 🌾 Reverse Farm Planner
+Start from crop and farm needs, then work backward from realistic water availability.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### ⚙️ Intervention Optimizer
+Evaluate intervention combinations against water, budget and planning constraints.
+
+</td>
+<td width="50%">
+
+### 📊 Impact & Reports
+Connect water recovery to farm resilience and generate decision-ready summaries.
+
+</td>
+</tr>
+</table>
+
+## 🎬 Product Walkthrough
+
+**The demo follows one decision journey:**
+
+`Spring Health → Recharge → Water Stress → Scenario → Intervention → Farm Plan → Impact`
+
+| Stage | User sees | Decision supported |
+|---|---|---|
+| 🧬 Spring DNA | Spring health profile | What is changing? |
+| 🗺️ Recharge Map | Priority zones | Where should action happen? |
+| 💧 Water Debt | Supply vs demand | How large is the gap? |
+| 🔮 Simulator | Future scenarios | What could happen next? |
+| ⚙️ Optimizer | Intervention options | What should be prioritized? |
+| 🌾 Farm Planner | Crop/water plan | How can recovered water be used? |
+| 🔗 Impact Chain | Outcome pathway | What impact can be tracked? |
+| 📊 Reports | Planning summary | What can the team act on? |
+
+> **Presentation tip:** Start with the spring, follow the water, and finish with the farm decision. This keeps the hackathon demo focused on one continuous story.
+
+## 📌 Prototype Status
+
+| Area | Status |
+|---|---|
+| Core planning workflow | 🟢 Prototype ready |
+| Dashboard & visualizations | 🟢 Implemented |
+| Recharge / water-planning modules | 🟢 Implemented foundation |
+| Scenario & optimization workflow | 🟢 Implemented foundation |
+| Live field / IoT ingestion | 🟡 Roadmap |
+| Production geospatial datasets | 🟡 Roadmap |
+| Field-calibrated AI models | 🟡 Roadmap |
+
 ## 🧠 End-to-End System Flow
 
 ### 🌊 Spring-to-Farm Decision Pipeline
