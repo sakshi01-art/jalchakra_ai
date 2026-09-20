@@ -371,3 +371,12 @@ Secrets and local environment files are intentionally excluded from version cont
   <b>🌊 JALCHAKRA AI</b><br/>
   <sub>Building a smarter bridge from spring revival to farm resilience.</sub>
 </p>
+
+
+---
+
+## 🔥 Latest Update — 20 September 2026
+
+- Refined the **Spring-to-Farm** product story.
+- Kept the core planning modules clearly organized for the SIH 2026 demo.
+- Clarified the separation between prototype features and future live-data integrations.
