@@ -380,3 +380,11 @@ Secrets and local environment files are intentionally excluded from version cont
 - Refined the **Spring-to-Farm** product story.
 - Kept the core planning modules clearly organized for the SIH 2026 demo.
 - Clarified the separation between prototype features and future live-data integrations.
+
+
+## 🔥 Latest Update — 22 September 2026
+
+- Added documentation for the Spring-to-Farm decision model.
+- Clarified how spring health, recharge, water availability, intervention scenarios, and farm planning connect.
+- Kept live field/IoT data and field-calibrated models clearly marked as future extensions.
+
