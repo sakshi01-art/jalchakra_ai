@@ -388,3 +388,8 @@ Secrets and local environment files are intentionally excluded from version cont
 - Clarified how spring health, recharge, water availability, intervention scenarios, and farm planning connect.
 - Kept live field/IoT data and field-calibrated models clearly marked as future extensions.
 
+## 🚀 Development Update — 22 September 2026
+
+- Refined the end-to-end **Spring → Recharge → Water → Farm** decision narrative.
+- Kept prototype intelligence clearly separated from future field-calibrated data.
+- Aligned the dashboard modules around one continuous planning workflow.
