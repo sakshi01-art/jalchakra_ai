@@ -393,3 +393,11 @@ Secrets and local environment files are intentionally excluded from version cont
 - Refined the end-to-end **Spring → Recharge → Water → Farm** decision narrative.
 - Kept prototype intelligence clearly separated from future field-calibrated data.
 - Aligned the dashboard modules around one continuous planning workflow.
+
+---
+
+## 🚀 Development Update — 24 September 2026
+
+- Refined the **Spring → Recharge → Water → Farm** planning workflow.
+- Added clearer checkpoints for scenario comparison, intervention planning, and decision-ready outputs.
+- Kept live field data, IoT integration, and field-calibrated models explicitly separated as future work.
