@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#071827"/><stop offset="1" stop-color="#0b3342"/></linearGradient>
+  <linearGradient id="water" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-opacity=".25"/></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#67e8f9"/></marker>
+</defs>
+<rect width="1400" height="820" rx="32" fill="url(#bg)"/>
+<text x="700" y="62" text-anchor="middle" fill="#fff" font-size="38" font-family="Arial" font-weight="700">JALCHAKRA AI • SPRING-TO-FARM INTELLIGENCE</text>
+<text x="700" y="98" text-anchor="middle" fill="#a7f3d0" font-size="18" font-family="Arial">Revive the spring → recover water → plan the farm → measure impact</text>
+
+<g font-family="Arial" text-anchor="middle" filter="url(#shadow)">
+  <g>
+    <rect x="55" y="175" width="220" height="145" rx="22" fill="#102a3d" stroke="#22d3ee" stroke-width="3"/>
+    <text x="165" y="218" fill="#67e8f9" font-size="25" font-weight="700">① DATA</text>
+    <text x="165" y="252" fill="#fff" font-size="17">Satellite • Terrain</text>
+    <text x="165" y="278" fill="#fff" font-size="17">Rainfall • Spring</text>
+    <text x="165" y="304" fill="#fff" font-size="17">Soil • Field Surveys</text>
+  </g>
+  <g>
+    <rect x="340" y="175" width="220" height="145" rx="22" fill="#102a3d" stroke="#38bdf8" stroke-width="3"/>
+    <text x="450" y="218" fill="#7dd3fc" font-size="25" font-weight="700">② SPRING DNA</text>
+    <text x="450" y="252" fill="#fff" font-size="17">Health profile</text>
+    <text x="450" y="278" fill="#fff" font-size="17">Decline signals</text>
+    <text x="450" y="304" fill="#fff" font-size="17">Seasonal pattern</text>
+  </g>
+  <g>
+    <rect x="625" y="175" width="220" height="145" rx="22" fill="#102a3d" stroke="#34d399" stroke-width="3"/>
+    <text x="735" y="218" fill="#6ee7b7" font-size="25" font-weight="700">③ RECHARGE</text>
+    <text x="735" y="252" fill="#fff" font-size="17">Priority zones</text>
+    <text x="735" y="278" fill="#fff" font-size="17">Intervention options</text>
+    <text x="735" y="304" fill="#fff" font-size="17">Spatial planning</text>
+  </g>
+  <g>
+    <rect x="910" y="175" width="220" height="145" rx="22" fill="#102a3d" stroke="#fbbf24" stroke-width="3"/>
+    <text x="1020" y="218" fill="#fde68a" font-size="25" font-weight="700">④ WATER AI</text>
+    <text x="1020" y="252" fill="#fff" font-size="17">Supply forecast</text>
+    <text x="1020" y="278" fill="#fff" font-size="17">Water debt</text>
+    <text x="1020" y="304" fill="#fff" font-size="17">Future scenarios</text>
+  </g>
+  <g>
+    <rect x="1195" y="175" width="150" height="145" rx="22" fill="#102a3d" stroke="#fb923c" stroke-width="3"/>
+    <text x="1270" y="218" fill="#fdba74" font-size="23" font-weight="700">⑤ OPTIMIZE</text>
+    <text x="1270" y="252" fill="#fff" font-size="16">Cost + water</text>
+    <text x="1270" y="278" fill="#fff" font-size="16">constraints</text>
+    <text x="1270" y="304" fill="#fff" font-size="16">priority plan</text>
+  </g>
+</g>
+
+<g stroke="#67e8f9" stroke-width="4" fill="none" marker-end="url(#arrow)">
+  <path d="M275 248 H335"/>
+  <path d="M560 248 H620"/>
+  <path d="M845 248 H905"/>
+  <path d="M1130 248 H1190"/>
+</g>
+
+<g filter="url(#shadow)" font-family="Arial" text-anchor="middle">
+  <rect x="225" y="430" width="270" height="155" rx="24" fill="#102a3d" stroke="#a78bfa" stroke-width="3"/>
+  <text x="360" y="475" fill="#c4b5fd" font-size="25" font-weight="700">⑥ FARM PLANNER</text>
+  <text x="360" y="510" fill="#fff" font-size="17">Crop suitability</text>
+  <text x="360" y="536" fill="#fff" font-size="17">Water allocation</text>
+  <text x="360" y="562" fill="#fff" font-size="17">Farm resilience</text>
+
+  <rect x="565" y="430" width="270" height="155" rx="24" fill="#102a3d" stroke="#f472b6" stroke-width="3"/>
+  <text x="700" y="475" fill="#f9a8d4" font-size="25" font-weight="700">⑦ IMPACT CHAIN</text>
+  <text x="700" y="510" fill="#fff" font-size="17">Water recovery</text>
+  <text x="700" y="536" fill="#fff" font-size="17">Food security</text>
+  <text x="700" y="562" fill="#fff" font-size="17">Livelihood impact</text>
+
+  <rect x="905" y="430" width="270" height="155" rx="24" fill="#102a3d" stroke="#60a5fa" stroke-width="3"/>
+  <text x="1040" y="475" fill="#93c5fd" font-size="25" font-weight="700">⑧ MONITOR</text>
+  <text x="1040" y="510" fill="#fff" font-size="17">Observations</text>
+  <text x="1040" y="536" fill="#fff" font-size="17">Reports & validation</text>
+  <text x="1040" y="562" fill="#fff" font-size="17">Continuous feedback</text>
+</g>
+
+<g stroke="#67e8f9" stroke-width="4" fill="none" marker-end="url(#arrow)">
+  <path d="M1270 325 C1270 380 1135 400 1040 425"/>
+  <path d="M905 508 H840"/>
+  <path d="M565 508 H500"/>
+</g>
+
+<path d="M1040 590 C1040 700 360 700 360 590 C360 640 450 680 700 680 C900 680 1000 650 1040 590" fill="none" stroke="#34d399" stroke-width="4" stroke-dasharray="10 10" marker-end="url(#arrow)"/>
+<text x="700" y="735" text-anchor="middle" fill="#a7f3d0" font-size="20" font-family="Arial" font-weight="700">CONTINUOUS AI FEEDBACK LOOP</text>
+<text x="700" y="768" text-anchor="middle" fill="#cbd5e1" font-size="16" font-family="Arial">New observations refine spring health, scenarios, interventions and farm planning.</text>
+</svg>
