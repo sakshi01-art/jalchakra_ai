@@ -401,3 +401,11 @@ Secrets and local environment files are intentionally excluded from version cont
 - Refined the **Spring → Recharge → Water → Farm** planning workflow.
 - Added clearer checkpoints for scenario comparison, intervention planning, and decision-ready outputs.
 - Kept live field data, IoT integration, and field-calibrated models explicitly separated as future work.
+
+---
+
+## ✨ Development Update — 26 September 2026
+
+- Refreshed the project documentation for the latest development stage.
+- Kept the roadmap focused on practical implementation, testing, and continuous improvement.
+- Updated the project progress section so the repository stays current and easy to review.
